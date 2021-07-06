@@ -10,6 +10,10 @@
     "release": "yarn test && npm whoami && yarn install --production --force && npm version patch && npm publish --access=public && yarn install",
     "test": "echo No tests yet..."
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/folkforms/npm-release"
+  },
   "author": "folkforms",
   "license": "ISC",
   "dependencies": {
