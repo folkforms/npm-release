@@ -5,6 +5,14 @@ const shelljs = require("shelljs");
 
 // FIXME if(argument === "genconfig") { generate default config }
 
+// Default config:
+// yarn test
+// npm whoami
+// yarn install --production --force
+// npm version patch
+// npm publish
+// yarn install
+
 const contents = fileio.readLines(".npm-release.yml");
 contents.forEach(line => {
   const result = shelljs.exec(line);
