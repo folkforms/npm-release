@@ -9,7 +9,7 @@ const contents = fileio.readLines(".npm-release.yml");
 contents.forEach(line => {
   const result = shelljs.exec(line);
   if(result.code != 0) {
-    console.log(`Error running command '${line}'`);
-    shelljs.exit(code);
+    console.log(`Error running command '${line}' (${result.code})`);
+    shelljs.exit(result.code);
   }
 });
