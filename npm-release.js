@@ -3,7 +3,7 @@
 const fileio = require("@folkforms/file-io");
 const { Command } = require('commander');
 
-const execute = (shell = dummyShellJs, props, argv) => {
+const npmRelease = (shell = dummyShellJs, props, argv) => {
 
   const program = new Command();
   program.version('0.0.1');
@@ -42,3 +42,5 @@ const execute = (shell = dummyShellJs, props, argv) => {
     });
   }
 }
+
+module.exports = npmRelease;

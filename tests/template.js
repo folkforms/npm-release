@@ -1,6 +1,6 @@
 const yaml = require("js-yaml");
 const dummyShellJs = require("../../dummyShellJs");
-const dockerTasks = require("../../npm-release");
+const npmRelease = require("../../npm-release");
 
 beforeEach(() => {
   dummyShellJs._clear();
@@ -20,7 +20,7 @@ test('{{ description | first | esq }} (file: {{ @filename }})', () => {
   ];
   const expectedErrorCode = {{ expectedErrorCode | trimarray | usedefault(0) }};
 
-  const exitCode = dockerTasks(dummyShellJs, props, inputArgs);
+  const exitCode = npmRelease(dummyShellJs, props, inputArgs);
 
   expect(exitCode).toEqual(expectedErrorCode);
   expectedCommands.forEach(cmd => {
