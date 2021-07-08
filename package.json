@@ -2,13 +2,15 @@
   "name": "@folkforms/npm-release",
   "version": "0.0.3",
   "description": "npm release workflow.",
-  "main": "index.js",
+  "main": "npm-release.js",
   "bin": {
-    "release": "./npm-release.js"
+    "docker-tasks": "./cli.js"
   },
   "scripts": {
+    "npm-release": "node cli.js",
     "release": "yarn test && npm whoami && yarn install --production --force && npm version patch && npm publish --access=public && yarn install",
-    "test": "echo No tests yet..."
+    "generate-tests": "markdown-to-x -i=tests/test-cases/*.md -s=tests/structure.md -t=tests/template.js -o=tests/gen -e=.test.js",
+    "test": "yarn generate-tests && jest"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,10 @@
   "license": "ISC",
   "dependencies": {
     "@folkforms/file-io": "^0.2.2",
+    "commander": "^8.0.0",
     "shelljs": "^0.8.4"
+  },
+  "devDependencies": {
+    "markdown-to-x": "^0.0.12"
   }
 }
