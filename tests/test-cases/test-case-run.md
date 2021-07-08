@@ -1,8 +1,8 @@
-# Test case for 'XXX' command
+# Test case for 'run' command
 
 ## Description
 
-Test when we call 'XXX' it executes the correct command.
+Test when we call 'run' it executes the correct command.
 
 ## Input config
 

@@ -10,8 +10,7 @@ test('{{ description | first | esq }} (file: {{ @filename }})', () => {
   const inputConfig = [
     {{ inputConfig | trimarray | doublequote | join(",\n") | indent(4) }}
   ];
-  const props = yaml.load(inputConfig.join("\n"));
-  const inputArgs = "{{ inputArgs | trimarray }}".split(" ");
+  const inputArgs = [ "node", "script", "{{ inputArgs | trimarray }}".split(" ") ].flat();
   const expectedCommands = [
     {{ expectedCommands | trimarray | doublequote | join(",\n") | indent(4) }}
   ];
@@ -20,7 +19,7 @@ test('{{ description | first | esq }} (file: {{ @filename }})', () => {
   ];
   const expectedErrorCode = {{ expectedErrorCode | trimarray | usedefault(0) }};
 
-  const exitCode = npmRelease(dummyShellJs, props, inputArgs);
+  const exitCode = npmRelease(dummyShellJs, inputConfig, inputArgs);
 
   expect(exitCode).toEqual(expectedErrorCode);
   expectedCommands.forEach(cmd => {

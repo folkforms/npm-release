@@ -3,7 +3,7 @@
 const fs = require("fs-extra");
 const yaml = require("js-yaml");
 const dryRunShellJs = require("./dryRunShellJs");
-const dockerTasks = require("./docker-tasks");
+const npmRelease = require("./npm-release");
 
 process.argv.splice(0,2); // Remove node and script name
 
@@ -30,6 +30,6 @@ try {
   throw e;
 }
 
-dockerTasks(shell, props, process.argv);
+npmRelease(shell, props, process.argv);
 
 if(dryRun) { console.log(""); }
