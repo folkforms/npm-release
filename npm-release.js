@@ -11,8 +11,7 @@ const npmRelease = (shell = dummyShellJs, props, argv) => {
 
   if(program.args.length === 0) {
     console.log("ERROR: No option chosen.");
-    console.log("FIXME Print help text...");
-    return 1;
+    program.help();
   }
 
   const option = program.args[0];
