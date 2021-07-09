@@ -4,7 +4,7 @@
   "description": "npm release workflow.",
   "main": "npm-release.js",
   "bin": {
-    "docker-tasks": "./cli.js"
+    "npm-release": "./cli.js"
   },
   "scripts": {
     "npm-release": "node cli.js",
