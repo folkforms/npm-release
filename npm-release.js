@@ -3,7 +3,7 @@
 const fileio = require("@folkforms/file-io");
 const { Command } = require('commander');
 
-const npmRelease = (shell = dummyShellJs, props, argv) => {
+const npmRelease = (shell, props, argv) => {
 
   const program = new Command();
   program.option('-n, --dry-run', 'dry run');
