@@ -1,8 +1,8 @@
-# Test case for 'run' command
+# Test case for default option
 
 ## Description
 
-Test when we call 'run' it executes the correct command.
+Test when we call the code with no args it executes the correct commands.
 
 ## Input config
 
@@ -10,8 +10,6 @@ Test when we call 'run' it executes the correct command.
     world
 
 ## Input args
-
-    run
 
 ## Expected commands
 

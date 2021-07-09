@@ -10,10 +10,10 @@ const npmRelease = (shell = shelljs, props, argv) => {
   program.option('-n, --dry-run', 'dry run');
   program.parse(argv);
 
-  if(program.args.length === 0) {
-    console.log("ERROR: No option chosen.");
-    program.help();
-  }
+  // if(program.args.length === 0) {
+  //   console.log("ERROR: No option chosen.");
+  //   program.help();
+  // }
 
   const option = program.args[0];
   if(option === "genconfig") {
@@ -28,7 +28,8 @@ const npmRelease = (shell = shelljs, props, argv) => {
     return 0;
   }
 
-  if(option === "run") {
+  // Default option
+  if(!option) {
     props.forEach(line => {
       const result = shell.exec(line);
       if(result.code != 0) {
@@ -40,7 +41,7 @@ const npmRelease = (shell = shelljs, props, argv) => {
   }
 
   console.log(`ERROR: Unknown command '${option}'`);
-  console.log("FIXME Print help text...");
+  program.help();
   return 1;
 }
 
