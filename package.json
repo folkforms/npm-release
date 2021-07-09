@@ -20,11 +20,11 @@
   "license": "ISC",
   "dependencies": {
     "@folkforms/file-io": "^0.2.2",
+    "dummy-shells": "^0.0.3",
     "commander": "^8.0.0",
     "shelljs": "^0.8.4"
   },
   "devDependencies": {
-    "dummy-shells": "^0.0.3",
     "markdown-to-x": "^0.0.12"
   }
 }
