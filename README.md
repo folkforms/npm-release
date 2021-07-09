@@ -4,5 +4,6 @@ Basic npm release workflow: Run tests, check login status, install production de
 
 ## How to use
 
-- `yarn add @folkforms/npm-release`
-- `yarn release`
+- `npm install add @folkforms/npm-release`
+- `npm run npm-release genconfig`
+- `npm run npm-release`
