@@ -15,7 +15,7 @@ Test when we call 'genconfig' it executes the correct command.
 
 ## Expected commands
 
-    cp ./node_modules/npm-release/.npm-release-default-config.yml ./.npm-release.yml
+    cp ./node_modules/@folkforms/npm-release/.npm-release-default-config.yml ./.npm-release.yml
 
 ## Expected echos
 

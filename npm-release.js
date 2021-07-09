@@ -17,7 +17,7 @@ const npmRelease = (shell = shelljs, props, argv) => {
 
   const option = program.args[0];
   if(option === "genconfig") {
-    const cmd1 = "./node_modules/npm-release/.npm-release-default-config.yml";
+    const cmd1 = "./node_modules/@folkforms/npm-release/.npm-release-default-config.yml";
     const cmd2 = "./.npm-release.yml";
     const r = shell.cp(cmd1, cmd2);
     if(r.code) {
