@@ -26,8 +26,8 @@ try {
   file = fs.readFileSync('.npm-release.yml', 'utf8')
   props = yaml.load(file);
 } catch(e) {
-  execFunction.echo("ERROR: Could not read file .npm-release.yml. Please run `yarn npm-release genconfig` if you have not done so already.");
-  throw e;
+  console.log("ERROR: Could not read file .npm-release.yml. Please run `yarn npm-release genconfig` if you have not done so already.");
+  return 1;
 }
 
 npmRelease(shell, props, process.argv);
