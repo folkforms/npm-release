@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
+const shelljs = require("shelljs");
 const fileio = require("@folkforms/file-io");
 const { Command } = require('commander');
 
-const npmRelease = (shell, props, argv) => {
+const npmRelease = (shell = shelljs, props, argv) => {
 
   const program = new Command();
   program.option('-n, --dry-run', 'dry run');
