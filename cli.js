@@ -22,14 +22,18 @@ const shell = dryRun ? dryRunShellJs : undefined;
 if(dryRun) { console.log(""); }
 
 let file, props;
-try {
-  file = fs.readFileSync('.npm-release.yml', 'utf8')
-  props = yaml.load(file);
-} catch(e) {
-  console.log("ERROR: Could not read file .npm-release.yml. Please run `yarn npm-release genconfig` if you have not done so already.");
-  return 1;
+if(process.argv[0] !== "genconfig") {
+  try {
+    file = fs.readFileSync('.npm-release.yml', 'utf8')
+    props = yaml.load(file);
+  } catch(e) {
+    console.log("ERROR: Could not read file .npm-release.yml. Please run `yarn npm-release genconfig` if you have not done so already.");
+    return 1;
+  }
 }
 
-npmRelease(shell, props, process.argv);
+const r = npmRelease(shell, props, process.argv);
 
 if(dryRun) { console.log(""); }
+
+return r;
