@@ -1,6 +1,6 @@
 {
   "name": "@folkforms/npm-release",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "npm release workflow.",
   "main": "npm-release.js",
   "bin": {
