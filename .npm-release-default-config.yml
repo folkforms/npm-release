@@ -1,5 +1,4 @@
 - yarn test
-- yarn prettier --check .
 - npm whoami
 - yarn install --production --force
 - npm version patch
