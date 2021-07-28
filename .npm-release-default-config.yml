@@ -5,3 +5,4 @@
 - npm version patch
 - npm publish
 - yarn install
+- git push
