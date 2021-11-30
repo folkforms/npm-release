@@ -3,13 +3,14 @@ const fileio = require("@folkforms/file-io");
 const genconfig = () => {
   const config = [
     "- yarn test",
-    "- yarn line-endings",
+    "- yarn line-endings --check ** --line-ending LF",
     "- npm whoami",
     "- yarn install --production --force",
     "- npm version patch",
-    "- npm publish",
+    "- npm publish --access=public",
     "- yarn install",
     "- git push",
+    "",
   ];
   const path = "./.npm-release.yml";
   if(fileio.exists(path)) {
