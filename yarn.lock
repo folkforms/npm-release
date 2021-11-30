@@ -302,7 +302,7 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@folkforms/file-io@^0.2.1", "@folkforms/file-io@^0.2.2":
+"@folkforms/file-io@^0.2.1":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@folkforms/file-io/-/file-io-0.2.2.tgz#259cbb2f363aa819ef30ed55252d4140b94e0e20"
   integrity sha512-+yElFzIx+5JeIjrzM5limr/0pPqm2klEqswGdK3JsaQgIr01o5HdPApcmOSYkB0vONSJ6J9EUOy06axcYlOEZg==
@@ -310,6 +310,16 @@
     fast-glob "^3.2.5"
     fs-extra "^9.1.0"
     jest "^27.0.4"
+
+"@folkforms/file-io@^0.2.6":
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/@folkforms/file-io/-/file-io-0.2.6.tgz#2c5a1138ac0b0869d7901d57a232afe1f6cbdafb"
+  integrity sha512-awtSziZ1SH+UDb0erxPM3ZwOEh3SMpUanSKJ+x4ebxbNKKd2f1ukkUtXlqOE6YOEBeqB4xSYwP7p9I4jqe3qFg==
+  dependencies:
+    fast-glob "^3.2.5"
+    fs-extra "^9.1.0"
+    shelljs "^0.8.4"
+    untildify "^4.0.0"
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
@@ -2557,6 +2567,11 @@ universalify@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-2.0.0.tgz#75a4984efedc4b08975c5aeb73f530d02df25717"
   integrity sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==
+
+untildify@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/untildify/-/untildify-4.0.0.tgz#2bc947b953652487e4600949fb091e3ae8cd919b"
+  integrity sha512-KK8xQ1mkzZeg9inewmFVDNkg3l5LUhoq9kN6iWYB/CC9YMG8HA+c1Q8HwDe6dEX7kErrEVNVBO3fWsVq5iDgtw==
 
 v8-to-istanbul@^8.0.0:
   version "8.0.0"

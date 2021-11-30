@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 const shelljs = require("shelljs");
-const fileio = require("@folkforms/file-io");
 const { Command } = require('commander');
+const genconfig = require("./genconfig");
 
 const npmRelease = (shell = shelljs, props, argv) => {
 
@@ -17,13 +17,7 @@ const npmRelease = (shell = shelljs, props, argv) => {
 
   const option = program.args[0];
   if(option === "genconfig") {
-    const cmd1 = "./node_modules/@folkforms/npm-release/.npm-release-default-config.yml";
-    const cmd2 = "./.npm-release.yml";
-    const r = shell.cp(cmd1, cmd2);
-    if(r.code) {
-      shell.echo(`ERROR: Could not copy file '${cmd1}' to '${cmd2}'.`);
-      return 1;
-    }
+    genconfig();
     shell.echo("Created file .npm-release.yml. You need to edit this file with your project details.");
     return 0;
   }
