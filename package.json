@@ -23,6 +23,7 @@
     "commander": "^8.0.0",
     "dummy-shells": "^0.0.3",
     "fs-extra": "^10.0.0",
+    "js-yaml": "^4.1.0",
     "shelljs": "^0.8.4"
   },
   "devDependencies": {
