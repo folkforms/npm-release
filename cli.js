@@ -26,7 +26,7 @@ if(process.argv[2] !== "genconfig") {
     props = yaml.load(file);
   } catch(e) {
     console.log("ERROR: Could not read file .npm-release.yml. Please run `yarn npm-release genconfig` if you have not done so already.");
-    return 1;
+    process.exit(1);
   }
 }
 
@@ -34,4 +34,4 @@ const r = npmRelease(shell, props, process.argv);
 
 if(dryRun) { console.log(""); }
 
-return r;
+process.exit(r);
